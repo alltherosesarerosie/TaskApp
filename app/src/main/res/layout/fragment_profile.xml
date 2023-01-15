@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.profile.ProfileFragment"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="50dp"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:id="@+id/img"
+        app:cardCornerRadius="220dp"
+        android:layout_gravity="center_horizontal"
+        android:innerRadius="0dp"
+        android:shape="ring"
+        android:thicknessRatio="1.9">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/jennie"
+            android:scaleType="centerCrop"/>
+    </androidx.cardview.widget.CardView>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:hint="@string/profile"/>
+
+</LinearLayout>
