@@ -33,6 +33,11 @@
         android:name="com.geektech.taskapp.ui.profile.ProfileFragment"
         android:label="@string/profile"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/onBoardingFragment"
+        android:name="com.geektech.taskapp.ui.onBoarding.OnBoardingFragment"
+        android:label="fragment_on_boarding"
+        tools:layout="@layout/fragment_on_boarding" />
 
 
 </navigation>
