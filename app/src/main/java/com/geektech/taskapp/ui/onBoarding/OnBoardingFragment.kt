@@ -9,11 +9,13 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.geektech.taskapp.R
+import com.geektech.taskapp.data.Pref
 import com.geektech.taskapp.databinding.FragmentOnBoardingBinding
 import com.geektech.taskapp.ui.onBoarding.adapter.OnBoardingAdapter
 
 class OnBoardingFragment : Fragment() {
     private lateinit var binding: FragmentOnBoardingBinding
+    private lateinit var pref: Pref
 
 
     override fun onCreateView(
@@ -26,15 +28,15 @@ class OnBoardingFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val adapter=OnBoardingAdapter(){
+        pref = Pref(requireContext())
+        val adapter = OnBoardingAdapter() {
+            pref.saveSeen()
             findNavController().navigateUp()
         }
-        binding.viewPager.adapter=adapter
-        binding.indicator.setViewPager(binding.viewPager)
 
-        binding.viewPager.registerOnPageChangeCallback(
-            object : ViewPager2.OnPageChangeCallback() {
-            })
+        binding.viewPager.adapter = adapter
+        binding.indicator.setViewPager(binding.viewPager)
+        adapter.registerAdapterDataObserver(binding.indicator.adapterDataObserver)
     }
 
 }

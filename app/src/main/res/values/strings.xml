@@ -10,4 +10,7 @@
     <string name="save">Save</string>
     <string name="profile">Profile</string>
     <string name="get_started">Get Started</string>
+    <string name="todo">TODO</string>
+    <string name="your_name">Your name</string>
+    <string name="your_age">Your age</string>
 </resources>

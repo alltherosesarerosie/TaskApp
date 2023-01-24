@@ -18,6 +18,7 @@
         android:shape="ring"
         android:thicknessRatio="1.9">
         <ImageView
+            android:id="@+id/profile_img"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:src="@drawable/jennie"
@@ -29,5 +30,36 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:hint="@string/profile"/>
+
+    <EditText
+        android:id="@+id/et_name"
+        android:autofillHints="name"
+        android:hint="@string/your_name"
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:layout_marginHorizontal="16dp"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/et_age"
+        android:autofillHints="name"
+        android:hint="@string/your_age"
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:layout_marginHorizontal="16dp"
+        tools:ignore="LabelFor" />
+    <Button
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/save"
+        android:textAllCaps="false"
+        android:textSize="28sp"
+        android:layout_gravity="center"/>
 
 </LinearLayout>
